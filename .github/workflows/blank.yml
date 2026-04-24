@@ -9,4 +9,6 @@ jobs:
 
     steps:
       - name: hello-step
-        run: echo "hello-satya, welcome to gha"
+        run: |
+        echo "this is line one"
+        echo "this is line two"
