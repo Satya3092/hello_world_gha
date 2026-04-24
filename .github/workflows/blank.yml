@@ -7,18 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: echo "demo build"
+        run: echo "Hello ${{ vars.MY_NAME }}"
 
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: test phase
-        run: echo "running test case"
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: deploy phase
-        run: echo "this is deploy stage"
