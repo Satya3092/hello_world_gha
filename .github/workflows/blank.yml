@@ -12,12 +12,14 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: test phase
         run: echo "running test case"
 
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: deploy phase
         run: echo "this is deploy stage"
